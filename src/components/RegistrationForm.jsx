@@ -7,14 +7,14 @@ import { connect } from 'react-redux'
 function RegistationForm(props) {
     const [nickname, setNickname] = useState('')
 
-const handleSubmit = (event, nickname) => {
-    event.preventDefault();
+const handleSubmit = (e) => {   
+    e.preventDefault()
     props.login(nickname)
 }
 
     return (
         <div>
-            <form className='regForm'>
+            <form className='regForm' onSubmit={handleSubmit}>
                 <label htmlFor="nick">Enter your nickname</label>
                 <input type="text" id='nick' onChange={(e) => {setNickname(e.target.value)}} required/>
                 <label htmlFor="email ">Enter your email</label>
@@ -29,7 +29,7 @@ const handleSubmit = (event, nickname) => {
                 <input type="password" id='pass1' required />
                 <label htmlFor="pass2">Enter your password again</label>
                 <input type="password" id='pass2' required />
-                <button type='submit' onClick={(e) => {handleSubmit(e, nickname)}} >Create account</button>
+                <button type='submit'>Create account</button>
             </form>
         </div>
     )
