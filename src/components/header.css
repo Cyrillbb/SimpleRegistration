@@ -1,0 +1,9 @@
+.header {
+    background-color: khaki;
+    width: 100%;
+    height: 60px;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

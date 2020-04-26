@@ -6,6 +6,7 @@
     margin: 0 auto;
     align-items: center;    
     background-color: #7FDBFF;
+    border-radius: 10px;
 }
 
 .regForm input {
